@@ -1,0 +1,802 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+
+<title>Investment-ideas-15</title>
+<style>
+    .bignav {
+        padding: 20px 20px;
+
+    }
+
+    .hborder {
+        border: 1px solid;
+    }
+
+    .cntext {
+        padding: 10%;
+        margin-top: 5%;
+        font-size: 30px;
+        background-image: linear-gradient(to right top, #2a93d2, #238fd0, #1c8bce, #1486cc, #0a82ca);
+    }
+
+    .imglogo {
+        margin-top: 100px;
+    }
+
+    .textmidd {
+        margin-left: 100px;
+        margin-top: 70px;
+        font-size: 17px;
+
+    }
+
+    .dgrey {
+        margin-top: 100px;
+        padding: 7%;
+        font-size: 18px;
+        line-height: 50px;
+        background-image: linear-gradient(to right top, #efefef, #e6e6e6, #dddddd, #d4d4d4, #cbcbcb);
+    }
+
+    .end {
+        background-image: linear-gradient(to right top, #232323, #232323, #232323, #232323, #232323);
+        padding: 10px;
+
+    }
+
+    .videol {
+        width: 900px;
+        height: 500px;
+
+
+
+        display: block;
+        margin: auto;
+
+
+    }
+
+    .btv {
+        width: 315px;
+        height: 67px;
+
+        font-size: xx-large;
+    }
+
+    .footer {
+        background-color: grey;
+        position: absolute;
+        width: 100%;
+        height: 60px;
+        color: white;
+
+
+
+    }
+
+    .copy {
+
+        margin-left: 60px;
+    }
+
+    /*
+    DEMO STYLE
+*/
+
+    @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: #fafafa;
+    }
+
+    p {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.1em;
+        font-weight: 300;
+        line-height: 1.7em;
+        /* color: #999; */
+    }
+
+    a,
+    a:hover,
+    a:focus {
+        color: inherit;
+        text-decoration: none;
+        transition: all 0.3s;
+    }
+
+    .navbar {
+        padding: 15px 10px;
+        background: #fff;
+        border: none;
+        border-radius: 0;
+        margin-bottom: 40px;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-btn {
+        box-shadow: none;
+        outline: none !important;
+        border: none;
+    }
+
+    .line {
+        width: 100%;
+        height: 1px;
+        border-bottom: 1px dashed #ddd;
+        margin: 40px 0;
+    }
+
+    /* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+    .wrapper {
+        display: flex;
+        width: 100%;
+        align-items: stretch;
+
+    }
+
+    #sidebar {
+        min-width: 250px;
+        max-width: 250px;
+        background: #7386D5;
+        color: #fff;
+        transition: all 0.3s;
+        z-index: 10;
+    }
+
+    #sidebar.active {
+        margin-right: -250px;
+    }
+
+    #sidebar .sidebar-header {
+        padding: 20px;
+        background: #6d7fcc;
+    }
+
+    #sidebar ul.components {
+        padding: 20px 0;
+        border-bottom: 1px solid #47748b;
+    }
+
+    #sidebar ul p {
+        color: #fff;
+        padding: 10px;
+    }
+
+    #sidebar ul li a {
+        padding: 10px;
+        font-size: 1.1em;
+        display: block;
+    }
+
+    #sidebar ul li a:hover {
+        color: #7386D5;
+        background: #fff;
+    }
+
+    #sidebar ul li.active>a,
+    a[aria-expanded="true"] {
+        color: #fff;
+        background: #6d7fcc;
+    }
+
+    a[data-toggle="collapse"] {
+        position: relative;
+    }
+
+    .dropdown-toggle::after {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+    }
+
+    ul ul a {
+        font-size: 0.9em !important;
+        padding-left: 30px !important;
+        background: #6d7fcc;
+    }
+
+    ul.CTAs {
+        padding: 20px;
+    }
+
+    ul.CTAs a {
+        text-align: center;
+        font-size: 0.9em !important;
+        display: block;
+        border-radius: 5px;
+        margin-bottom: 5px;
+    }
+
+
+
+    /* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+    #content {
+        width: 100%;
+        padding: 20px;
+        min-height: 100vh;
+        transition: all 0.3s;
+    }
+
+    /* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+    @media (max-width: 768px) {
+        #sidebar {
+            margin-left: -250px;
+        }
+
+        #sidebar.active {
+            margin-left: 0;
+        }
+
+        #sidebarCollapse span {
+            display: none;
+        }
+    }
+
+    .spacing p {
+        line-height: 1.8;
+    }
+
+    /*SOCİAL İCONS*/
+
+    /* footer social icons */
+
+    ul.social-network {
+        list-style: none;
+        display: inline;
+        margin-left: 0 !important;
+        padding: 0;
+        align-items: center;
+    }
+
+    ul.social-network li {
+        display: inline;
+        margin: 0 5px;
+    }
+
+
+    /* footer social icons */
+
+    .social-network a.icoFacebook:hover {
+        background-color: #3B5998;
+    }
+
+    .social-network a.icoLinkedin:hover {
+        background-color: #007bb7;
+    }
+
+    .social-network a.icoTwitter:hover {
+        background-color: #007bb7;
+    }
+
+    .social-network a.icoPinterest:hover {
+        background-color: #007bb7;
+    }
+
+    icoGoogle .social-network a.icoGoogle:hover {
+        background-color: #007bb7;
+    }
+
+    .social-network a.icoGoogle:hover {
+        background-color: #007bb7;
+    }
+
+    .social-network a.icoEmail:hover {
+        background-color: #007bb7;
+    }
+
+    .social-network a.icoFacebook:hover i,
+    .social-network a.icoLinkedin:hover i,
+    .social-network a.icoTwitter:hover i,
+    .social-network a.icoPinterest:hover i,
+    .social-network a.icoGoogle:hover i,
+
+    .social-network a.icoEmail:hover i {
+        color: #fff;
+    }
+
+    .social-network a.socialIcon:hover,
+    .socialHoverClass {
+        color: #44BCDD;
+    }
+
+    .social-circle li a {
+        display: inline-block;
+        position: relative;
+        margin: 0 auto 0 auto;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        text-align: center;
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    .social-circle li i {
+        margin: 0;
+        line-height: 30px;
+        text-align: center;
+    }
+
+
+
+    .social-circle i {
+        color: #595959;
+        -webkit-transition: all 0.8s;
+        -moz-transition: all 0.8s;
+        -o-transition: all 0.8s;
+        -ms-transition: all 0.8s;
+        transition: all 0.8s;
+    }
+
+    .social-network a {
+        background-color: #F9F9F9;
+    }
+    .blue{
+        color: blue;
+        font-size: 32px;
+    }
+
+    .strong{
+        font-weight: 1000;
+    }
+    .red{
+        color: red;
+    }
+
+    .orange{
+        color: orangered;
+    }
+
+
+</style>
+</head>
+
+<body>
+    <!-- Navbar start -->
+    <div class=" container-fluid hborder">
+        <div class="row ">
+            <div class="col-md-12 col-sm-12 ">
+                <nav class="navbar navbar-light navbar-expand-md    justify-content-md-center justify-content-start">
+                    <a class="navbar-brand  d-inline " href="index.html"><img src="img/Stockiest.png "class="img-fluid" width="150" height="80" 
+                            alt=""></a>
+                    <button class="navbar-toggler ml-1" type="button" data-toggle="collapse"
+                        data-target="#collapsingNavbar2">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="navbar-collapse collapse justify-content-between align-items-center w-100"
+                        id="collapsingNavbar2">
+                        <ul class="navbar-nav mx-auto text-md-center text-left">
+                            <li class="nav-item">
+                                <a class="nav-link" href="marketupdate.html"><strong>Market Update</strong> </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active text-white rounded bg-primary" href="premiummbr.html"><strong>Free Login
+                                </strong> </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html"><strong>Contact</strong> </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="membrlogin.html"><strong> Premium Member</strong></a>
+                                
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="myaccount.html"><strong> My Account</strong></a>
+                            </li>
+                            <a class="nav-link" href="#_"><i class="fa fa-search"></i></a>
+                        </ul>
+                        <ul class="nav   navbar-nav p-3 m-3    ">
+                            <li class="nav-item"><a class="nav-link" href=""><i class="fa fa-facebook mr-1"></i></a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href=""><i class="fa fa-twitter"></i></a> </li>
+                            <li class="nav-item"><a class="nav-link" href=""><i class="fa fa-instagram"></i></a> </li>
+                            <li class="nav-item"><a class="nav-link" href=""><i class="fa fa-linkedin"></i></a> </li>
+                            <li class="nav-item"><a class="nav-link" href=""><i class="fa fa-youtube-play"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- navebar end -->
+
+
+
+
+    
+
+    <div class="wrapper">
+        <!-- toggle button -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                        <i class="fa fa-bars"></i>
+                        <span></span>
+                    </button>
+                </div>
+
+            </nav>
+
+            <!-- Page Content  -->
+            <div class="container text-center">
+                <a href="daily-report page1.html" rel="category tag">DAILY
+                    REPORT,
+                </a>
+                <a href="kse100page2.html">KSE100 INDEX</a>
+                <h1><a href="investmentideas15.html">
+                    Trading Calls / Investment Ideas | 15th April 2021</a></h1>
+                <br>
+
+                <span>Posted on
+                    <a href="investmentideas15.html">APRAIL
+
+                        14, 2021
+                    </a>
+                </span>
+                <span> BY
+                    <span>
+                        <a href="index.html">STOCKIEST91</a>
+                    </span>
+                </span>
+            </div>
+            <br>
+            <br>
+
+            <div class="container spacing mt-4">
+            <h1><i> <strong>Pakistan Stock Exchange, key benchmark index showed a positive move in the preceding day. This uptrend rally likely to continue – slightly resistance near 45,600 – 700 zone. </strong></i></h1>
+<br>
+<p>As we have seen the market rally (14-04-2021). Index was on buoyant note right after the opening bell. Major support to move the index were TRG which added 31.74 ppts standalone basis followed by FFC 19.16 ppts &amp; HBL 18.72 ppts.</p>
+
+                <br>
+                <p>INDEX SUPPORT LEVEL WOULD BE NEAR 44,800 (STRONG SUPPORT). WHEREAS RESISTANCE WOULD BE NEAR 45,600 – 800.</p>
+<br>
+
+<p>However, market needs volumes – although we know that share activity will remain dull throughout holy month of Ramzan, still index needs a strong push from the bottom with volumetric support which rejuvenate the buying spree into market with more aggression.</p>
+
+
+
+
+               
+                <br>
+                <hr>
+                <h3><strong class="orange"> Trading Calls / Investment Ideas | 15th April 2021</strong></h3>
+                <hr>
+
+                <p><strong class="strong">NETSOL |</strong> good for the trading – it has potential to move much faster therefore, long position after market opening at market rate with expected upside level would be 190 – 192. Stop loss should be 178 (closing basis). Current level 183.94</p>
+
+                <br>
+
+                <p><strong class="strong">NRSL |</strong> keep your eyes more closely on this stock. It has attempted to breakout the level of 14 (which is key level at present). Closing above 14 would be better for this stock and price move likely to bullish from there. Immediately upside (Target) level 17 – 18 with stop loss below 13.</p>
+                <br>
+
+                <p><strong class="strong">SNGP |</strong> likely to hit 44 level soon. Price action enough strong to push price up. Since we are observing this stock, we saw that rang in which its trading from 38 – 42 zone. Finally its testing the 42 that’s a key area to make a new rally after consolidation of last 10-weeks. Upside potential 54 would be ultimate level as of now.</p>
+
+                <br>
+
+                <p><strong class="strong">PSO |</strong> currently this stock is trading in the downtrend, while short trading opportunity may arise therefore, if its sustaining the level of 217 then you can get long entry and hold for a 5 – 6 rupees gains in 1 or 2 days period.</p>
+
+                <br>
+
+                <p><strong class="strong">MLCF |</strong> long entry can be a good decision after breaking the level of 47.44 – which as previous high. Stock has tested the support&nbsp; near 46 and rebounded. Therefore, we believe that it would start up rally after breaking the said area. You may place your stop loss below 46. While if you can take more risk then it would be good accumulate till its trading above 43 zone.</p>
+
+                <br>
+
+                <p><strong class="strong">DFML |</strong> good entry level near 5 – 5.50 zone where from we can see upside upto 6 rupees. Stock is highly risky though you should place your stop loss below 5 or as per your risk appetite. Since last June 2020 this stock hasn’t traded below 5.</p>
+
+                <br>
+
+                <p><strong class="strong">ATRL |</strong> good to buy at market rate and hold for upside open to 280 zone. However, you can gradual off-load your holding before 280 level. While current price-action with hefty volumes illustrating the story ahead. Keep your stop loss below 247 zone.</p>
+
+                <br>
+
+               
+                <h5><p><strong class="red">Disclaimer: Performance subject to market risk.</strong></p></h5>
+               
+                <br>
+
+
+            </div>
+
+            <br>
+            <br>
+
+            <div class="col-md-10 text-center">
+
+               
+                <ul class="social-network social-circle">
+                    <li><a href="" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="" class="icoPinterest" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
+                    <li><a href="" class="icoGoogle" title="Google"><i class="fa fa-google-plus-official"></i></a></li>
+                    <li><a href="" class="icoEmail" title="Email"><i class="fa fa-envelope"></i></a></li>
+                </ul>
+            </div>
+
+            <br>
+            <hr>
+            <p class="text-center">
+
+                This entry was posted in <a href="daily-report page1.html"
+                    rel="category tag">Daily Report</a>,
+                    <a href="kse100page2.html"
+                    rel="category tag">KSE100 Index</a>,
+                     Bookmark the <a
+                    href=""
+                    title="Permalink to LesbianCougarDating Offers an Ultrachic Specialized niche Dating On line site for Senior citizen &amp; Vibrant Women"
+                    rel="bookmark">permalink</a>.
+            </p>
+            <hr>
+
+            <!-- PAGE CONTENT END -->
+
+
+
+
+            <!-- FOTTER START -->
+
+            <div class="row mt-3 ml-4">
+
+                <img width="150" height="150" src="img/default_avatar.jpg" alt="">
+                <h5 class="ml-4 mt-4"><b> STOCKIEST91</b>
+                </h5>
+
+            </div>
+            <hr>
+            <div class="container">
+                <div class="row ">
+                    <div class="col-md-6 ">
+                        <a href="investmentidea14.html"
+                            rel="prev"><span class=" "><i class="fa fa-angle-left w3-xlarge "
+                                    aria-hidden="true"></i></span>Trading Calls / Investment Idea | 14th April 2021</a>
+
+                    </div>
+                    <div class="col-md-6 text-center ">
+                        <a href=""
+                            rel="prev"><a href="" rel="next">Have fun with Sizzling 50 free spins no deposit casino Hot Deluxe Online Free  <span class="hide-for-small"><i class="icon-angle-right"></i></span></a>  <i class="fa fa-angle-right w3-xlarge "
+                            aria-hidden="true" ></i></a>
+
+                    </div>
+                </div>
+                <hr>
+                <br>
+
+                <h4><b> Leave a Reply</b> </h4>
+
+                <p class="logged-in-as"><a href="" aria-label="">Logged in as safdar khan</a>. <a href="">Log out?</a></p>
+
+                <h5>Comment</h5>
+
+                <p class="comment-form-comment">
+                    <textarea id="comment" name="comment" cols="50" rows="5" maxlength="5000"
+                        required="required"></textarea>
+                </p>
+               
+                <input name="submit" type="submit" id="submit" class="submit btn-primary btn-lg" value="Post Comment">
+            </div>
+
+
+        </div>
+
+        <!-- FOTTER END -->
+
+
+
+        <!-- SIDEBAR START-->
+
+        <nav id="sidebar">
+            <div class="sidebar-header">
+
+            </div>
+
+            <ul class="list-unstyled components">
+
+                <li class="active">
+                    <a href="#homeSubmenu" class="dropdown-toggle" data-toggle="collapse" aria-expanded="false">Market
+                        Strategy</a>
+                   
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="marketstrategy.html">Market Strategy </a>
+                        </li>
+                        <li>
+                            <a href="kse100page2.html">KSE100 Index</a>
+                        </li>
+                        <li>
+                            <a href="daily-report page1.html">Daily Report</a>
+                        </li>
+                        <li>
+                            <a href="weekly report page 1.html">Weekly Report</a>
+                        </li>
+                        <li>
+                            <a href="announcement.html">Announcements</a>
+                        </li>
+                       
+
+                    </ul>
+                </li>
+
+                <li class="">
+                    <a href="#secondSubmenu" class="dropdown-toggle" data-toggle="collapse" aria-expanded="false">Technical Analysis</a>
+                   
+                    <ul class="collapse list-unstyled" id="secondSubmenu">
+                        <li>
+                            <a href="banksta.html">Banks-TA</a>
+                        </li>
+                        <li>
+                            <a href="cementsta.html">Cements-TA</a>
+                        </li>
+                        <li>
+                            <a href="fertilizer.html">Fertilizer-TA</a>
+                        </li>
+                        <li>
+                            <a href="omcs.html">OMCs-TA</a>
+                        </li>
+                        <li>
+                            <a href="pharna.html">Pharma-TA</a>
+                        </li>
+                        <li>
+                            <a href="refinery.html">Refinery-TA</a>
+                        </li>
+                        <li>
+                            <a href="technology.html">Technology-TA</a>
+                        </li>
+                        <li>
+                            <a href="othersta.html">Others-TA</a>
+                        </li>
+                       
+
+                    </ul>
+                </li>
+
+                <li class="">
+                    <a href="#thirdSubmenu" class="dropdown-toggle" data-toggle="collapse" aria-expanded="false">Fundamental Analysis</a>
+                   
+                    <ul class="collapse list-unstyled" id="thirdSubmenu">
+                        <li>
+                            <a href="omcs1.html">OMCS-FA</a>
+                        </li>
+                        <li>
+                            <a href="technology.html">Technology-FA</a>
+                        </li>
+                       
+                       
+
+                    </ul>
+                </li>
+
+                <li class="">
+                    <a href="#fourSubmenu" class="dropdown-toggle" data-toggle="collapse" aria-expanded="false">Commodities</a>
+                   
+                    <ul class="collapse list-unstyled" id="fourSubmenu">
+                        <li>
+                            <a href="comodities.html">Commodities</a>
+                        </li>
+                        <li>
+                            <a href="oil.html">Oil</a>
+                        </li>
+                        <li>
+                            <a href="gold.html">Gold</a>
+                        </li>
+                       
+                       
+
+                    </ul>
+                </li>
+
+
+
+
+                <li>
+                    <a href="economy.html">Economy</a>
+                </li>
+                <li>
+                    <a href="breakoutalert.html">Breakout Alerts</a>
+                </li>
+                
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Learning
+                        with Stockiest91</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="learning.html">Learning
+                                with Stockiest91</a>
+                        </li>
+                        <li>
+                            <a href="educationaposts.html">Educational Posts</a>
+                        </li>
+
+                    </ul>
+                </li>
+
+
+            </ul>
+
+
+        </nav>
+
+
+    </div>
+
+
+    </div>
+
+
+    <!-- SIDBAR NAV END -->
+
+    <br>
+
+    <!-- FOOTER -->
+    <div class="container-fluid footer p-4">
+        <p class=" copy ">copyright 2021 © <strong>Stockiest 91</strong></p>
+    </div>
+    <!-- FOOTER END -->
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
